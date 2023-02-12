@@ -52,6 +52,11 @@ func main(){
 	default:
 		fmt.Println("Good evening.")
 	}
+
+  testPointers()  
+  testingArrays()
+  testingMaps()
+  fmt.Println("Result: " ,WordCount("I am The Best Because I am Good"))
 }
 
 
