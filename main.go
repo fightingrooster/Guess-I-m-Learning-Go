@@ -3,6 +3,7 @@ package main
 import(
   "fmt"
   "math/cmplx"
+  "time"
 )
 
 func main(){
@@ -25,6 +26,32 @@ func main(){
   fmt.Printf("Type: %T Value: %v\n", ToBe, ToBe)
 	fmt.Printf("Type: %T Value: %v\n", MaxInt, MaxInt)
 	fmt.Printf("Type: %T Value: %v\n", z, z)
+
+  sum := 0
+  for i:= 0; i< 10; i++{
+    sum +=i
+  }
+  fmt.Println("sum: ", sum)
+  
+  for sum < 1000{
+    sum += sum
+  }
+
+  fmt.Println("sum: ", sum)
+
+
+  fmt.Println(sqrt(2), sqrt(-4))
+
+  t := time.Now()
+  // -- this is interesting
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon.")
+	default:
+		fmt.Println("Good evening.")
+	}
 }
 
 
